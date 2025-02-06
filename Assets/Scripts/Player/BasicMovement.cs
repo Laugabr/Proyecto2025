@@ -5,38 +5,27 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
-    private float moveSpeed;
+    private float moveSpeed = 10f;
+    private float speedX, speedY;
 
-    private bool isMoving;
+    Rigidbody2D rb;
 
-    private Vector2 input;
-
-    private float horizMove = 0f;
-
-    private void Start()
+    void Start()
     {
-     tra    
+        rb = GetComponent<Rigidbody2D>();
     }
 
-
-    private void Update()
+    void Update()
     {
-        HorizontalMovement();  
-        if (isMoving)
+        speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
+        rb.linearVelocity = new Vector2(speedX,speedY );
+        if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") != 0)
         {
-         transform
-        }    
+            rb.linearVelocity = new Vector2(speedX/1.8f,speedY/1.8f);
+        }
     }
 
-    private void HorizontalMovement()
-    {
-        horizMove = input.GetAxisRaw("Horizontal") * moveSpeed;
-        
-        transfo
-    }
 
-    voidFixedUpdate ()
-    {
-        controller.Move(horizontalMove)
-    }
 }
+
