@@ -18,7 +18,7 @@ public class AIChase : MonoBehaviour
     //Modo ataque 
     [SerializeField] float attackCooldown;
     bool alreadyAttacked;
-    float health = 5f;
+    float health = 5f;  //vida
 
     //Estados
     public float sightRange, attackRange;
