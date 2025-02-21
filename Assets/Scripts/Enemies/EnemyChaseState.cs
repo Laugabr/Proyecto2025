@@ -1,5 +1,5 @@
 using UnityEngine;
-
+/*
 public class EnemyChaseState : EnemyBaseState
 {
     public override  abstract void EnterState(EnemyStateManage enemy)
@@ -14,4 +14,11 @@ public class EnemyChaseState : EnemyBaseState
    {
 
    }
+
+    void OnCollisionEnter2D()
+    {
+        
+    }
+
 }
+*/

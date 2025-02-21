@@ -1,5 +1,5 @@
 using UnityEngine;
-
+/*
 public class EnemyAttackState : EnemyBaseState
 {
     public override  abstract void EnterState(EnemyStateManage enemy)
@@ -14,4 +14,6 @@ public class EnemyAttackState : EnemyBaseState
    {
 
    }
-}
+   }
+   */
+

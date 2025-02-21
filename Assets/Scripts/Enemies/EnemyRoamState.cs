@@ -1,7 +1,8 @@
 using UnityEngine;
-
+/*
 public class EnemyRoamState : EnemyBaseState
 {
+  
      float rangoDeVision;
      Transform player;
 
@@ -26,3 +27,4 @@ public class EnemyRoamState : EnemyBaseState
     }
    
 }
+*/

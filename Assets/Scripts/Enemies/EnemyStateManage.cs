@@ -1,5 +1,5 @@
 using UnityEngine;
-
+/*
 public class EnemyStateManage : MonoBehaviour
 {
     EnemyBaseState currentState;
@@ -27,3 +27,4 @@ public class EnemyStateManage : MonoBehaviour
     }
 
 }
+*/
