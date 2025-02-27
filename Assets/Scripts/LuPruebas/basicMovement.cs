@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Prueba : MonoBehaviour
+public class basicMovement : MonoBehaviour
 {
     
 
