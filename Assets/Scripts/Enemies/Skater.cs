@@ -24,7 +24,7 @@ public class Skater : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         // Si choca con una pared, invierte la direcci�n
-        if (other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("grass"))
         {
             direction *= new Vector2(-1,0);
         }
