@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8418116952738333051}
   - component: {fileID: 3876630666471487445}
+  - component: {fileID: -8262474201554209591}
+  - component: {fileID: 852824182842137432}
   m_Layer: 0
   m_Name: polipalo
   m_TagString: Untagged
@@ -87,3 +89,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8262474201554209591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191789131927800837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6619e1d274666224a94a51b44d46ca0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMoveSpeed: 3
+  followRange: 10
+  attackRange: 3
+  retreatDistance: 3
+  rotationSpeed: 200
+  walkableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  attackCooldown: 2
+  bulletPrefab: {fileID: 9012139034653140578, guid: c9d5455abfd0efd4f8794fb7e1d35392, type: 3}
+  weaponTransform: {fileID: 8418116952738333051}
+  attackTimer: 0
+  warningPrefab: {fileID: 3174422643364958423, guid: 72076fecf977bda4a894cdec98f5fe1e, type: 3}
+  attentionPrefab: {fileID: 350649175611734291, guid: 9e0ac4116dfe5a34d9dad69f0364a93a, type: 3}
+  knockbackForce: 5
+  flashDuration: 0.1
+  stunDuration: 0.5
+  attentionTimer: 0
+--- !u!70 &852824182842137432
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191789131927800837}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.0576849}
+  m_Size: {x: 0.86901486, y: 1.038702}
+  m_Direction: 0

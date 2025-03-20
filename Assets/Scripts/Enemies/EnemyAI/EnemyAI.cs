@@ -89,9 +89,11 @@ private bool isStunned = false;
 
 [Tooltip("Duración del aturdimiento tras recibir daño.")]
 [SerializeField] private float stunDuration = 0.5f;
+
+[SerializeField] GameObject Abuela;
        private void InitializeStates()
         {
-            playerTransform = FindFirstObjectByType<BasicMovement>().transform;
+            playerTransform = abuela.transform;
             enemyAttackState = new AttackState(attackTimer, attackCooldown, warningPrefab, attackRange, bulletPrefab, weaponTransform, playerTransform);
             enemyChaseState  = new ChaseState(followRange, attackRange, playerTransform, attentionPrefab);
             enemyWanderState = new WanderState(followRange);
