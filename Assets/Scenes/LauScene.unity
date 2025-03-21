@@ -313,9 +313,21 @@ PrefabInstance:
       propertyPath: abuela
       value: 
       objectReference: {fileID: 1418596905}
+    - target: {fileID: 4731742072923367930, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
+      propertyPath: flashDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7041360611692751473, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
       propertyPath: m_Name
       value: poligas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041360611692751473, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041360611692751473, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -452,6 +464,7 @@ GameObject:
   - component: {fileID: 1418596906}
   - component: {fileID: 1418596909}
   - component: {fileID: 1418596910}
+  - component: {fileID: 1418596911}
   m_Layer: 0
   m_Name: abuelitaejemplo
   m_TagString: Player
@@ -605,6 +618,28 @@ CapsuleCollider2D:
   m_Offset: {x: -0.010945916, y: -0.4159419}
   m_Size: {x: 0.64810824, y: 0.7670487}
   m_Direction: 0
+--- !u!114 &1418596911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418596905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df935df0550ed14db6667188725e33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 0.2
+  basicAttackRange: 2
+  specialAttackRange: 3
+  ultimateAttackRange: 4
+  attackEffectPrefab: {fileID: 9012139034653140578, guid: 556270b1dab03434f95f9498ccc0c584, type: 3}
+  player: {fileID: 1418596908}
+  attackAngle: 45
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &1607764590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -985,6 +1020,10 @@ PrefabInstance:
       propertyPath: abuela
       value: 
       objectReference: {fileID: 1418596905}
+    - target: {fileID: -8262474201554209591, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
+      propertyPath: flashDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 381872626444671929, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
       propertyPath: m_Mass
       value: 12222
@@ -996,6 +1035,10 @@ PrefabInstance:
     - target: {fileID: 1191789131927800837, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
       propertyPath: m_Name
       value: polipalo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191789131927800837, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8418116952738333051, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
       propertyPath: m_LocalPosition.x

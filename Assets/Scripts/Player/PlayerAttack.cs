@@ -8,7 +8,8 @@ public class PlayerAttack : MonoBehaviour
     public float specialAttackRange = 3f;
     public float ultimateAttackRange = 4f; 
     private Vector2 attackDirection;
-
+    public GameObject attackEffectPrefab; // Prefab del efecto de ataque
+    public Transform player; // Referencia al jugador
     public float attackAngle = 45f; // Ángulo del ataque triangular
     public LayerMask enemyLayer; // Capa del enemigo
 
@@ -17,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
         // Comprueba el cooldown del ataque y si ya pasó el tiempo
         if (Time.time >= lastAttackTime + attackCooldown)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetMouseButtonDown(0))
             {
                 AttackBasic();
             }
@@ -36,7 +37,19 @@ public class PlayerAttack : MonoBehaviour
     void AttackBasic()
     {
         lastAttackTime = Time.time;
-        
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePos - (Vector2)player.position).normalized; // Dirección del ataque
+
+            // Instancia el efecto en el jugador
+        GameObject effect = Instantiate(attackEffectPrefab, player.position, Quaternion.identity);
+
+            // Rota el efecto para que apunte al mouse
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        effect.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+            // Destruye el efecto después de 0.3 segundos
+        Destroy(effect, 0.3f);
+
         DealDamageInTriangle(basicAttackRange, attackAngle);
         Debug.Log("is attacking");
     }
