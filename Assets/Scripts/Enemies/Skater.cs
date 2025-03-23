@@ -2,32 +2,40 @@ using UnityEngine;
 
 public class Skater : MonoBehaviour
 {
-    public float speed = 5f;
-    public Vector2 direction = Vector2.right; // Empieza movi�ndose a la derecha
+    [SerializeField] private float speed = 5f; // Velocidad del skater
+    [SerializeField] private Vector2 direction = Vector2.right; // Dirección inicial del skater
+    [SerializeField] private float pushDistance = 0.3f; // Distancia que la abuelita será empujada hacia arriba
+
 
     void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime); // Movimiento
     }
 
-     /*
-   private void OnTriggerEnter2D(Collider2D other) // Detecta si hubo colisi�n
-    {
-        // Si choca con una pared, invierte la direcci�n
-        if (other.CompareTag("Wall"))
-        {
-            direction *= new Vector2(-1,0);
-        }
-    }
-    */
-
     void OnCollisionEnter2D(Collision2D other)
     {
-        // Si choca con una pared, invierte la direcci�n
+        // Si choca con una pared, invierte la dirección
         if (other.gameObject.CompareTag("grass"))
         {
-            direction *= new Vector2(-1,0);
+            Debug.Log("Skater chocó con una pared (grass). Cambiando dirección.");
+            direction *= new Vector2(-1, 0);
+        }
+
+        // Si choca con la abuelita, la empuja hacia arriba
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Skater detectó colisión con el Player (abuelita).");
+
+            // Obtener la posición actual de la abuelita
+            Vector3 grandmaPosition = other.gameObject.transform.position;
+
+            // Mover la abuelita hacia arriba en el eje Y
+            grandmaPosition.y += pushDistance;
+
+            // Aplicar la nueva posición
+            other.gameObject.transform.position = grandmaPosition;
+
+            Debug.Log("Abuelita empujada hacia arriba. Nueva posición: " + grandmaPosition);
         }
     }
-
 }
