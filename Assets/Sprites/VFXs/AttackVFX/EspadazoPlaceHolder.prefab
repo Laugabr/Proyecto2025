@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8061666778852758351}
   - component: {fileID: 3448334985269884740}
   m_Layer: 0
-  m_Name: espadaso
+  m_Name: PS_Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4901,7 +4901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2871319738012716262}
   m_Layer: 0
-  m_Name: pasazo 1
+  m_Name: EspadazoPlaceHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

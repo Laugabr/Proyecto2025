@@ -266,8 +266,20 @@ PrefabInstance:
       value: 12222
       objectReference: {fileID: 0}
     - target: {fileID: -2828877179926359777, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: cf8c8d7473b04584aa558c5ab5e46b23, type: 2}
+    - target: {fileID: -2828877179926359777, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517846411368304350, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1817049
+      objectReference: {fileID: 0}
+    - target: {fileID: 2517846411368304350, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.326567
       objectReference: {fileID: 0}
     - target: {fileID: 3762536809637729396, guid: 0c1ac2bad0c3e7d489d2785130c315fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -366,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoundingShape2D: {fileID: 0}
-  Damping: 3.01
+  Damping: 1.26
   SlowingDistance: 5
   OversizeWindow:
     Enabled: 0
@@ -417,7 +429,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 8
+    OrthographicSize: 4.03
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -569,7 +581,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -577,7 +589,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -977,7 +989,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 4.03
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1029,8 +1041,24 @@ PrefabInstance:
       value: 12222
       objectReference: {fileID: 0}
     - target: {fileID: 381872626444671929, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: cf8c8d7473b04584aa558c5ab5e46b23, type: 2}
+    - target: {fileID: 381872626444671929, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 381872626444671929, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 852824182842137432, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.86901486
+      objectReference: {fileID: 0}
+    - target: {fileID: 852824182842137432, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.14252847
       objectReference: {fileID: 0}
     - target: {fileID: 1191789131927800837, guid: f770be50ad70f7a45b492787b7c067d9, type: 3}
       propertyPath: m_Name
